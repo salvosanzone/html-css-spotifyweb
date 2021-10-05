@@ -157,6 +157,20 @@ main .card-top {
   width: 11vw; /*cosi rimangono quadrati*/
   height: 11vw;
 }
+.album:hover{
+  cursor: pointer;
+}
+.album:hover .overlay-album{
+  display: block;
+}
+
+.overlay-album{
+  display: none;
+  position: absolute;
+  width: 11vw;
+  height: 11vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 img {
   width: 100%;
