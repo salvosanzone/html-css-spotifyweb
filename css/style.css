@@ -50,14 +50,23 @@ main .choose-category ul li{
   padding: 10px;
   color: #74767b;
 }
+main .container-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  flex-shrink: 0;
+}
+.container-cards .card{
+  width: 13vw;
+  height: 13vw;
+  margin: 2px;
+}
 
 main .card-top{
-  width: 200px;
-  height: 200px;
+  height: 160px;
   background-color: teal;
 }
 main .card-bottom{
-  width: 200px;
   height: 50px;
   background-color: thistle;
 }
