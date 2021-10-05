@@ -157,6 +157,9 @@ main .card-top {
   width: 11vw; /*cosi rimangono quadrati*/
   height: 11vw;
 }
+main .card-top .album{
+  position: relative;
+}
 .album:hover{
   cursor: pointer;
 }
@@ -209,8 +212,8 @@ footer .container-footer {
   align-items: center;
 }
 .container-footer .left-footer .cover-album{
-  width: 5vw;
-  height: 5vw;
+  width: 3vw;
+  height: 3vw;
   background-color: tan;
 }
 .container-footer .left-footer .info{
