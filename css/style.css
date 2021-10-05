@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+aside{
+  float: left;
+  width: 15%;
+  height: 500px;
+  background-color: black;
+  color: white;
+}
+
+header{
+  float: left;
+  width: 85%;
+  height: 70px;
+  background-color: #080b12;
+  color: white;
+}
+
+main{
+  width: 85%;
+  height: 430px;
+  background-color: #141922;
+  color: white;
+}
