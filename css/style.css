@@ -38,9 +38,31 @@ main{
 }
 main .choose-category{
   width: 100%;
-  height: 40px;
-  background-color: violet;
 }
+main .choose-category ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+main .choose-category ul li{
+  padding: 10px;
+  color: #74767b;
+}
+
+main .card-top{
+  width: 200px;
+  height: 200px;
+  background-color: teal;
+}
+main .card-bottom{
+  width: 200px;
+  height: 50px;
+  background-color: thistle;
+}
+
+
 /* FOOTER/PLAYER */
 footer{
   float: left;
