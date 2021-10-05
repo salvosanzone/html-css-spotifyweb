@@ -203,6 +203,43 @@ footer .container-footer {
   padding: 30px;
 }
 .container-footer .center-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-footer .player-bottom .start-song, .time-line, .end-song{
+  float: left;
+}
+.center-footer .player-bottom{
+  display: flex;
+  align-items: center;
+}
+.player-bottom .time-line{
+  width: 500px;
+  height: 2px;
+  margin: 15px;
+  background-color:#5a5a5a;
+}
+
+.player-bottom .time-line .time-line-song{
+  width: 60px;
+  height: 2px;
+  background-color: white;
 }
 .container-footer .right-footer {
+  display: flex;
+  align-items: center;
+}
+
+.right-footer .volume{
+  width: 90px;
+  height: 2px;
+  background-color:#5a5a5a;
+}
+
+.right-footer .volume .time-line-volume{
+  width: 50px;
+  height: 2px;
+  background-color: white;
 }
