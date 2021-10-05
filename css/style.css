@@ -13,13 +13,16 @@ body {
   clear: both;
 }
 /* ASIDE */
+/* aside-top */
 aside {
   float: left;
+  position: relative;
   width: 15%;
   height: calc(100vh - 70px);
   padding: 15px;
   background-color: black;
   color: white;
+  overflow-y: auto;
 }
 .logo {
   width: 60%;
@@ -27,8 +30,8 @@ aside {
 }
 
 aside .options {
-  padding: 10px 5px;
   position: relative;
+  padding-bottom: 10px;
 }
 
 aside .options .font-awesome {
@@ -38,22 +41,62 @@ aside .options .font-awesome {
 aside .options .text-font-awesome {
   float: left;
 }
-
+h4{
+  padding-bottom: 5px;
+}
 h5 {
   color: #74767b;
   padding-bottom: 5px;
+  cursor: pointer;
 }
-#position-playlist {
-  position: absolute;
-  top: 22px;
-}
+
 i {
   color: #74767b;
   padding-right: 5px;
 }
-#add-btn {
-  font-size: 40px;
+#btn-bigger {
+  /* font-size: 33px; */
+  
 }
+/* aside-bottom */
+aside .aside-bottom{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.aside-bottom .download, .artist{
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.aside-bottom .artist{
+  border-bottom: none;
+}
+
+
+
+.aside-bottom .download .left-side, .artist .left-side{
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.aside-bottom .download .right-side, .artist .right-side{
+  float: left;
+  width: 80%;
+  height: 100%;
+}
+
+
+
+
+
+
 /* HEADER */
 header {
   float: left;
@@ -130,6 +173,8 @@ h6 {
 
 /* FOOTER/PLAYER */
 footer {
+  position: fixed;
+  bottom: 0;
   float: left;
   width: 100%;
   height: 70px;
