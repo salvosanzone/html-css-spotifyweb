@@ -156,7 +156,6 @@ main .container-cards {
 main .card-top {
   width: 11vw; /*cosi rimangono quadrati*/
   height: 11vw;
-  background-color: teal;
 }
 
 img {
