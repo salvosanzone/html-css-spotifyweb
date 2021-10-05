@@ -22,7 +22,7 @@ aside{
   color: white;
 }
 .logo{
-  width: 130px;
+  width: 75%;
 }
 
 /* HEADER */
@@ -100,4 +100,19 @@ footer{
   height: 70px;
   background-color: #282828;
   color: white;
+}
+
+footer .container-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.container-footer .left-footer{
+}
+.container-footer .center-footer{
+}
+.container-footer .right-footer{
 }
