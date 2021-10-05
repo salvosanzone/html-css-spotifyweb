@@ -14,7 +14,7 @@ body{
 aside{
   float: left;
   width: 15%;
-  height: 500px;
+  height: 100vh;
   background-color: black;
   color: white;
 }
@@ -28,8 +28,13 @@ header{
 }
 
 main{
-  width: 85%;
-  height: 430px;
+  height:calc(100vh - 70px);
   background-color: #141922;
+  color: white;
+}
+
+footer{
+  height: 70px;
+  background-color: #282828;
   color: white;
 }
