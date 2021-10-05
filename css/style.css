@@ -191,6 +191,16 @@ footer .container-footer {
 }
 
 .container-footer .left-footer {
+  display: flex;
+  align-items: center;
+}
+.container-footer .left-footer .cover-album{
+  width: 5vw;
+  height: 5vw;
+  background-color: tan;
+}
+.container-footer .left-footer .info{
+  padding: 30px;
 }
 .container-footer .center-footer {
 }
