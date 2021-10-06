@@ -12,9 +12,9 @@ body {
   display: table;
   clear: both;
 }
-/* WRAPPER */
-.wrapper{         /*contiene tutto*/
-  width: 100%;  
+/* WRAPPER */ /*contiene tutto, infatti do   le dimensioni della viewport*/
+.wrapper {
+  width: 100%;
   height: 100vh;
 }
 
@@ -23,7 +23,7 @@ body {
 aside {
   float: left;
   position: relative;
-  width: 15%;
+  width: 200px; /*non la do in % poiche non si ridimensiona quando stringo*/
   height: calc(100vh - 70px);
   padding: 15px;
   background-color: black;
@@ -60,9 +60,7 @@ i {
   color: #74767b;
   padding-right: 5px;
 }
-#btn-bigger {
-  /* font-size: 33px; */
-}
+
 /* aside-bottom */
 aside .aside-bottom {
   width: 100%;
@@ -100,21 +98,21 @@ aside .aside-bottom {
 
 /* HEADER */
 header {
-  position: fixed;
+  position: fixed; /*sta sopra a tutto*/
   top: 0;
   right: 0;
   z-index: 999;
-  width: calc(100% - 15%);
+  width: calc(100% - 200px); /*tutto il contenitore tranne 200px di aside*/
   height: 70px;
   text-align: right;
-  padding: 15px 25px;
+  padding: 15px 35px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-} 
- .btn-upgrade {
+}
+.btn-upgrade {
   background-color: #080b12;
   color: white;
-  padding: 7px 50px;
+  padding: 7px 40px;
   border-radius: 20px;
   border: 2px solid white;
   cursor: pointer;
@@ -122,8 +120,10 @@ header {
 /* MAIN */
 main {
   float: left;
-  width: 85%;
-  height: calc(100vh - 70px);
+  width: calc(100% - 200px); /*tutto il contenitore tranne 200px di aside*/
+  height: calc(
+    100% - 70px
+  ); /*metto la % poiche al suo contenitore(wrapper ho dato vh)e ad esso tolgo i 70px del footer*/
   background-color: #141922;
   color: white;
   overflow-y: auto;
@@ -145,6 +145,10 @@ main .choose-category ul li {
   font-size: 12px;
   padding: 10px;
   color: #74767b;
+}
+
+.filter:hover {
+  color: white;
 }
 main .container-cards {
   width: 100%;
@@ -168,7 +172,7 @@ main .card-top .album {
 .album:hover {
   cursor: pointer;
 }
-.album:hover .overlay-album{
+.album:hover .overlay-album {
   display: block;
 }
 
@@ -177,12 +181,13 @@ main .card-top .album {
   position: absolute;
   width: 11vw;
   height: 11vw;
+  text-align: center;
+  line-height: 13vw;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.play-btn{
+.play-btn {
   font-size: 50px;
   color: white;
-
 }
 img {
   width: 100%;
@@ -221,10 +226,14 @@ footer .container-footer {
   display: flex;
   align-items: center;
 }
+.container-footer .left-footer .font-awesome,
+h6 {
+  cursor: pointer;
+}
+
 .container-footer .left-footer .cover-album {
-  width: 3vw;
-  height: 3vw;
-  background-color: tan;
+  width: 50px;
+  height: 50px;
 }
 .container-footer .left-footer .info {
   padding: 30px;
@@ -234,21 +243,30 @@ footer .container-footer {
   flex-direction: column;
   align-items: center;
 }
+.container-footer .center-footer .transform:hover,
+header .transform:hover {
+  transform: scale(1.1);
+}
 
 .center-footer .player-bottom .start-song,
 .time-line,
 .end-song {
   float: left;
 }
+.center-footer span {
+  cursor: pointer;
+}
 .center-footer .player-bottom {
   display: flex;
   align-items: center;
 }
+
 .player-bottom .time-line {
   width: 500px;
   height: 2px;
   margin: 15px;
   background-color: #5a5a5a;
+  cursor: pointer;
 }
 
 .player-bottom .time-line .time-line-song {
@@ -260,11 +278,14 @@ footer .container-footer {
   display: flex;
   align-items: center;
 }
-
+.right-footer span {
+  cursor: pointer;
+}
 .right-footer .volume {
   width: 90px;
   height: 2px;
   background-color: #5a5a5a;
+  cursor: pointer;
 }
 
 .right-footer .volume .time-line-volume {
