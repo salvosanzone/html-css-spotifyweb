@@ -12,6 +12,12 @@ body {
   display: table;
   clear: both;
 }
+/* WRAPPER */
+.wrapper{         /*contiene tutto*/
+  width: 100%;  
+  height: 100vh;
+}
+
 /* ASIDE */
 /* aside-top */
 aside {
@@ -41,7 +47,7 @@ aside .options .font-awesome {
 aside .options .text-font-awesome {
   float: left;
 }
-h4{
+h4 {
   padding-bottom: 5px;
 }
 h5 {
@@ -56,58 +62,56 @@ i {
 }
 #btn-bigger {
   /* font-size: 33px; */
-  
 }
 /* aside-bottom */
-aside .aside-bottom{
+aside .aside-bottom {
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
+  background-color: black;
 }
 
-
-.aside-bottom .download, .artist{
+.aside-bottom .download,
+.artist {
   width: 80%;
   margin: auto;
   height: 100%;
   border-bottom: 1px solid gray;
 }
 
-.aside-bottom .artist{
+.aside-bottom .artist {
   border-bottom: none;
 }
 
-
-
-.aside-bottom .download .left-side, .artist .left-side{
+.aside-bottom .download .left-side,
+.artist .left-side {
   float: left;
   width: 20%;
   height: 100%;
 }
 
-.aside-bottom .download .right-side, .artist .right-side{
+.aside-bottom .download .right-side,
+.artist .right-side {
   float: left;
   width: 80%;
   height: 100%;
 }
 
-
-
-
-
-
 /* HEADER */
 header {
-  float: left;
-  width: 85%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: calc(100% - 15%);
   height: 70px;
   text-align: right;
-  padding: 15px;
-  background-color: #080b12;
+  padding: 15px 25px;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-}
-.btn-upgrade {
+} 
+ .btn-upgrade {
   background-color: #080b12;
   color: white;
   padding: 7px 50px;
@@ -119,10 +123,11 @@ header {
 main {
   float: left;
   width: 85%;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 70px);
   background-color: #141922;
   color: white;
   overflow-y: auto;
+  padding-top: 80px;
 }
 main .choose-category {
   display: flex;
@@ -157,27 +162,32 @@ main .card-top {
   width: 11vw; /*cosi rimangono quadrati*/
   height: 11vw;
 }
-main .card-top .album{
+main .card-top .album {
   position: relative;
 }
-.album:hover{
+.album:hover {
   cursor: pointer;
 }
 .album:hover .overlay-album{
   display: block;
 }
 
-.overlay-album{
+.overlay-album {
   display: none;
   position: absolute;
   width: 11vw;
   height: 11vw;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.play-btn{
+  font-size: 50px;
+  color: white;
 
+}
 img {
   width: 100%;
 }
+
 main .card-bottom {
   width: 11vw;
   text-align: center;
@@ -211,12 +221,12 @@ footer .container-footer {
   display: flex;
   align-items: center;
 }
-.container-footer .left-footer .cover-album{
+.container-footer .left-footer .cover-album {
   width: 3vw;
   height: 3vw;
   background-color: tan;
 }
-.container-footer .left-footer .info{
+.container-footer .left-footer .info {
   padding: 30px;
 }
 .container-footer .center-footer {
@@ -225,21 +235,23 @@ footer .container-footer {
   align-items: center;
 }
 
-.center-footer .player-bottom .start-song, .time-line, .end-song{
+.center-footer .player-bottom .start-song,
+.time-line,
+.end-song {
   float: left;
 }
-.center-footer .player-bottom{
+.center-footer .player-bottom {
   display: flex;
   align-items: center;
 }
-.player-bottom .time-line{
+.player-bottom .time-line {
   width: 500px;
   height: 2px;
   margin: 15px;
-  background-color:#5a5a5a;
+  background-color: #5a5a5a;
 }
 
-.player-bottom .time-line .time-line-song{
+.player-bottom .time-line .time-line-song {
   width: 60px;
   height: 2px;
   background-color: white;
@@ -249,13 +261,13 @@ footer .container-footer {
   align-items: center;
 }
 
-.right-footer .volume{
+.right-footer .volume {
   width: 90px;
   height: 2px;
-  background-color:#5a5a5a;
+  background-color: #5a5a5a;
 }
 
-.right-footer .volume .time-line-volume{
+.right-footer .volume .time-line-volume {
   width: 50px;
   height: 2px;
   background-color: white;
