@@ -17,27 +17,27 @@ body {
   width: 100%;
   height: 100vh;
 }
+/*SUB-WRAPPER*/
+.sub-wrapper {
+  height: calc(100% - 70px);
+}
 
 /* ASIDE */
-/* aside-top */
-aside {
+.sub-wrapper aside {
   float: left;
-  position: relative;
-  width: 200px; /*non la do in % poiche non si ridimensiona quando stringo*/
-  height: calc(100vh - 70px);
-  padding: 15px;
+  width: 150px; /*non la do in % poiche non si ridimensiona quando stringo*/
+  height: 100%;
   background-color: black;
   color: white;
-  overflow-y: auto;
+}
+/* aside-top */
+aside .aside-top{
+  height: calc(100% - 40px);
+  padding: 15px;
 }
 .logo {
-  width: 60%;
-  padding-bottom: 20px;
-}
-
-aside .options {
-  position: relative;
-  padding-bottom: 10px;
+  width: 70px;
+  padding-bottom: 30px;
 }
 
 aside .options .font-awesome {
@@ -48,12 +48,13 @@ aside .options .text-font-awesome {
   float: left;
 }
 h4 {
-  padding-bottom: 5px;
+  padding: 10px 0px;
 }
 h5 {
   color: #74767b;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
   cursor: pointer;
+  font-size: 10px;
 }
 
 i {
@@ -64,17 +65,13 @@ i {
 /* aside-bottom */
 aside .aside-bottom {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: black;
+  height: 40px;
 }
 
 .aside-bottom .download,
 .artist {
   width: 80%;
   margin: auto;
-  height: 100%;
   border-bottom: 1px solid gray;
 }
 
@@ -102,7 +99,7 @@ header {
   top: 0;
   right: 0;
   z-index: 999;
-  width: calc(100% - 200px); /*tutto il contenitore tranne 200px di aside*/
+  width: calc(100% - 150px); /*tutto il contenitore tranne 150px di aside*/
   height: 70px;
   text-align: right;
   padding: 15px 35px;
@@ -120,10 +117,8 @@ header {
 /* MAIN */
 main {
   float: left;
-  width: calc(100% - 200px); /*tutto il contenitore tranne 200px di aside*/
-  height: calc(
-    100% - 70px
-  ); /*metto la % poiche al suo contenitore(wrapper ho dato vh)e ad esso tolgo i 70px del footer*/
+  width: calc(100% - 150px); /*tutto il contenitore tranne 150px di aside*/
+  height: 100%; /*del wrapper*/
   background-color: #141922;
   color: white;
   overflow-y: auto;
@@ -142,7 +137,7 @@ main .choose-category ul {
 }
 
 main .choose-category ul li {
-  font-size: 12px;
+  font-size: 10px;
   padding: 10px;
   color: #74767b;
 }
@@ -159,13 +154,10 @@ main .container-cards {
   flex-shrink: 0;
 }
 .container-cards .card {
-  margin: 1.7%;
+  width: 14%; /*se la do in % non ho bisogno di una height*/
+  margin: 1.3%;
 }
 
-main .card-top {
-  width: 11vw; /*cosi rimangono quadrati*/
-  height: 11vw;
-}
 main .card-top .album {
   position: relative;
 }
@@ -179,10 +171,10 @@ main .card-top .album {
 .overlay-album {
   display: none;
   position: absolute;
-  width: 11vw;
-  height: 11vw;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  line-height: 13vw;
+  line-height: 12;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .play-btn {
@@ -194,19 +186,15 @@ img {
 }
 
 main .card-bottom {
-  width: 11vw;
   text-align: center;
+  padding-top: 10px;
 }
-
-h6 {
-  color: #585b61;
+main .card-bottom .title{
+  font-size: 10px;
 }
 
 /* FOOTER/PLAYER */
 footer {
-  position: fixed;
-  bottom: 0;
-  float: left;
   width: 100%;
   height: 70px;
   padding: 10px;
@@ -219,7 +207,6 @@ footer .container-footer {
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  height: 100%;
 }
 
 .container-footer .left-footer {
@@ -229,6 +216,7 @@ footer .container-footer {
 .container-footer .left-footer .font-awesome,
 h6 {
   cursor: pointer;
+  color: #585b61;
 }
 
 .container-footer .left-footer .cover-album {
@@ -236,7 +224,7 @@ h6 {
   height: 50px;
 }
 .container-footer .left-footer .info {
-  padding: 30px;
+  padding: 10px;
 }
 .container-footer .center-footer {
   display: flex;
@@ -262,7 +250,7 @@ header .transform:hover {
 }
 
 .player-bottom .time-line {
-  width: 500px;
+  width: 200px;
   height: 2px;
   margin: 15px;
   background-color: #5a5a5a;
@@ -282,7 +270,7 @@ header .transform:hover {
   cursor: pointer;
 }
 .right-footer .volume {
-  width: 90px;
+  width: 70px;
   height: 2px;
   background-color: #5a5a5a;
   cursor: pointer;
@@ -293,3 +281,22 @@ header .transform:hover {
   height: 2px;
   background-color: white;
 }
+
+
+/* MEDIA QUERY*/
+/* @media screen and (max-width:768px){
+  aside{
+    width: 150px;
+  }
+  header{
+    width: calc(100% - 150px);
+  }
+  main{
+    width: calc(100% - 150px);
+  }
+  main .card-top {
+    width: 18vw;
+    height: 18vw;
+}
+}  */
+
