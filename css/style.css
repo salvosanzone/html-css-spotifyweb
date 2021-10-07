@@ -148,7 +148,10 @@ main .choose-category ul li {
   padding: 10px;
   color: #74767b;
 }
-
+main .choose-category .active{
+  border-bottom: 2px solid lime;
+  border
+}
 .filter:hover {
   color: white;
 }
@@ -297,6 +300,7 @@ header .transform:hover {
   .album .overlay-album{
     padding: 33%;
   }
+  
   footer .container-footer .center-footer .player-bottom .time-line{
     width: 150px;
   }
